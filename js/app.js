@@ -6,14 +6,16 @@ const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
 
 const INITIAL_COLOR = "#2c2c2c"
-const CANVAS_SIZE = 700;
+// const CANVAS_SIZE_WIDTH = parseInt($(window).width() * 0.2) + 'px';;
+const CANVAS_SIZE_WIDTH = 700;
+const CANVAS_SIZE_HEIGHT = 550;
 
 
-canvas.width = CANVAS_SIZE;
-canvas.height = CANVAS_SIZE;
+canvas.width = CANVAS_SIZE_WIDTH;
+canvas.height = CANVAS_SIZE_HEIGHT;
 
 ctx.fillStyle = '#fff';
-ctx.fillRect(0,0, CANVAS_SIZE, CANVAS_SIZE);
+ctx.fillRect(0, 0, CANVAS_SIZE_WIDTH, CANVAS_SIZE_HEIGHT);
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.fillStyle = INITIAL_COLOR;
 ctx.lineWidth = 2.5;
@@ -71,7 +73,7 @@ function handleModeClick(event){
 
 function handleCanvasClick(){
     if(filling){
-    ctx.fillRect(0,0, CANVAS_SIZE, CANVAS_SIZE);
+    ctx.fillRect(0, 0, CANVAS_SIZE_WIDTH, CANVAS_SIZE_HEIGHT);
     }
 }
 
